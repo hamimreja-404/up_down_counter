@@ -1,0 +1,53 @@
+
+*** Running vivado
+    with args -log down_up_count_tb.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source down_up_count_tb.tcl -notrace
+
+
+
+****** Vivado v2024.1 (64-bit)
+  **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Sun Oct  6 19:33:52 2024
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source down_up_count_tb.tcl -notrace
+create_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:21 . Memory (MB): peak = 516.891 ; gain = 200.832
+Command: link_design -top down_up_count_tb -part xc7k70tfbv676-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7k70tfbv676-1
+INFO: [Device 21-9227] Part: xc7k70tfbv676-1 does not have CEAM library.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 921.363 ; gain = 0.000
+INFO: [Project 1-479] Netlist was created with Vivado 2024.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Read ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1007.406 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1008.047 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+5 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:20 . Memory (MB): peak = 1036.910 ; gain = 520.020
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7k70t'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net q_OBUF[0] has multiple drivers: q_reg[0]__0/Q, and q_reg[0]/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net q_OBUF[1] has multiple drivers: q_reg[1]/Q, and q_reg[1]__0/Q.
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net q_OBUF[2] has multiple drivers: q_reg[2]/Q, and q_reg[2]__0/Q.
+INFO: [Project 1-461] DRC finished with 3 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+ERROR: [Vivado_Tcl 4-78] Error(s) found during DRC. Opt_design not run.
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 1067.398 ; gain = 30.488
+INFO: [Common 17-83] Releasing license: Implementation
+10 Infos, 0 Warnings, 0 Critical Warnings and 4 Errors encountered.
+opt_design failed
+ERROR: [Common 17-39] 'opt_design' failed due to earlier errors.
+
+INFO: [Common 17-206] Exiting Vivado at Sun Oct  6 19:34:41 2024...
